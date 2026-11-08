@@ -1,0 +1,511 @@
+
+/* =========================================
+   MAÏ CREA'CHIC — IDENTITÉ VISUELLE
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --rose: #FFF5F7;
+    --rose-fonce: #F5DDE5;
+    --bordeaux: #702642;
+    --rose-vif: #C2185B;
+    --dore: #D4A574;
+    --texte: #30212A;
+    --blanc: #FFFFFF;
+    --ombre: 0 12px 35px rgba(112, 38, 66, 0.10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--rose);
+    color: var(--texte);
+    line-height: 1.7;
+}
+
+/* =========================================
+   EN-TÊTE
+========================================= */
+
+header {
+    background: var(--bordeaux);
+    color: var(--blanc);
+    text-align: center;
+    padding: 28px 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+    padding: 18px 20px;
+    background: var(--blanc);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--bordeaux);
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--rose-vif);
+}
+
+/* =========================================
+   SECTIONS GÉNÉRALES
+========================================= */
+
+section {
+    padding: 85px 9%;
+    scroll-margin-top: 90px;
+}
+
+section h2,
+section h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--bordeaux);
+    line-height: 1.3;
+}
+
+section h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    margin-bottom: 20px;
+}
+
+section h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+section p {
+    margin-bottom: 17px;
+    color: #65545C;
+}
+
+section > p:first-of-type {
+    color: var(--rose-vif);
+    font-weight: 700;
+}
+
+/* =========================================
+   ACCUEIL
+========================================= */
+
+#accueil {
+    min-height: 570px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(212, 165, 116, 0.22), transparent 30%),
+        linear-gradient(120deg, #FFF5F7, #F5DDE5);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#accueil h2 {
+    max-width: 700px;
+    font-size: clamp(38px, 6vw, 62px);
+}
+
+#accueil p {
+    max-width: 650px;
+    font-size: 17px;
+}
+
+/* =========================================
+   BOUTONS
+========================================= */
+
+.boutons-accueil {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-principal {
+    background: var(--bordeaux);
+    color: var(--blanc);
+    border: 2px solid var(--bordeaux);
+}
+
+.btn-principal:hover {
+    background: var(--rose-vif);
+    border-color: var(--rose-vif);
+    transform: translateY(-3px);
+}
+
+.btn-secondaire {
+    background: transparent;
+    color: var(--bordeaux);
+    border: 2px solid var(--bordeaux);
+}
+
+.btn-secondaire:hover {
+    background: var(--bordeaux);
+    color: var(--blanc);
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   NOS SERVICES
+========================================= */
+
+#nosservices {
+    background: var(--blanc);
+    text-align: center;
+}
+
+#nosservices article {
+    display: inline-block;
+    vertical-align: top;
+    width: 46%;
+    min-height: 190px;
+    margin: 15px 1%;
+    padding: 30px 25px;
+    background: var(--rose);
+    border-radius: 18px;
+    border: 1px solid var(--rose-fonce);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#nosservices article:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--ombre);
+}
+
+#nosservices article h3 {
+    color: var(--rose-vif);
+}
+
+/* =========================================
+   NOS CRÉATIONS
+========================================= */
+
+#noscreation {
+    background: var(--rose);
+    text-align: center;
+}
+
+#noscreation .carte-creation {
+    max-width: 1100px;
+    margin: 35px auto 0;
+    padding: 35px;
+    background: var(--blanc);
+    border-radius: 22px;
+    box-shadow: var(--ombre);
+}
+
+.carte-creation h3 {
+    margin-top: 35px;
+    color: var(--bordeaux);
+}
+
+.carte-creation h3:first-child {
+    margin-top: 0;
+}
+
+.carte-creation ul {
+    list-style: none;
+    margin: 12px 0;
+}
+
+.carte-creation li {
+    display: inline-block;
+    padding: 7px 18px;
+    background: var(--rose-fonce);
+    color: var(--bordeaux);
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.carte-creation img {
+    width: 30%;
+    height: 260px;
+    object-fit: cover;
+    margin: 12px 1%;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.carte-creation img:hover {
+    transform: scale(1.04);
+    box-shadow: var(--ombre);
+}
+
+/* =========================================
+   À PROPOS
+========================================= */
+
+#apropos {
+    background: var(--blanc);
+    text-align: center;
+}
+
+#apropos p {
+    max-width: 850px;
+    margin: 15px auto;
+}
+
+#apropos p:last-child {
+    color: var(--rose-vif);
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+/* =========================================
+   POURQUOI NOUS CHOISIR
+========================================= */
+
+#pourquoinous {
+    background: linear-gradient(135deg, #F5DDE5, #FFF5F7);
+    text-align: center;
+}
+
+#pourquoinous p {
+    max-width: 850px;
+    margin: 18px auto;
+    padding: 20px 25px;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 14px;
+    text-align: left;
+    box-shadow: 0 5px 18px rgba(112, 38, 66, 0.05);
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
+#contact {
+    background: var(--blanc);
+    text-align: center;
+}
+
+#contact p {
+    max-width: 750px;
+    margin: 15px auto;
+}
+
+#contact ul {
+    list-style: none;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 25px;
+    background: var(--rose);
+    border-radius: 18px;
+    text-align: left;
+}
+
+#contact li {
+    padding: 12px 5px;
+    border-bottom: 1px solid var(--rose-fonce);
+    color: var(--texte);
+}
+
+#contact li:last-child {
+    border-bottom: none;
+}
+
+#contact .btn {
+    background: #218C55;
+    color: var(--blanc);
+    border-color: #218C55;
+}
+
+#contact .btn:hover {
+    background: #176D40;
+}
+
+/* =========================================
+   TEXTE AVANT LE FOOTER
+========================================= */
+
+body > p {
+    padding: 25px 15px;
+    text-align: center;
+    color: var(--bordeaux);
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 600;
+    background: var(--rose);
+}
+
+/* =========================================
+   PIED DE PAGE
+========================================= */
+
+footer {
+    background: var(--bordeaux);
+    color: var(--blanc);
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer p {
+    color: var(--blanc);
+    margin: 8px 0;
+}
+
+footer p:first-child {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+/* =========================================
+   RESPONSIVE : TABLETTES
+========================================= */
+
+@media (max-width: 900px) {
+    section {
+        padding: 65px 6%;
+    }
+
+    #nosservices article {
+        width: 46%;
+    }
+
+    .carte-creation img {
+        width: 45%;
+        height: 230px;
+    }
+
+    nav {
+        gap: 12px 18px;
+    }
+}
+
+/* =========================================
+   RESPONSIVE : TÉLÉPHONES
+========================================= */
+
+@media (max-width: 600px) {
+    header {
+        font-size: 22px;
+        padding: 22px 12px;
+    }
+
+    nav {
+        position: relative;
+        padding: 15px 10px;
+        gap: 12px 16px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+
+    #accueil {
+        min-height: 480px;
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    #accueil h2 {
+        font-size: 37px;
+    }
+
+    #accueil p {
+        font-size: 15px;
+    }
+
+    .boutons-accueil {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        text-align: center;
+        width: 100%;
+    }
+
+    #nosservices article {
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .carte-creation {
+        padding: 20px !important;
+    }
+
+    .carte-creation img {
+        width: 100%;
+        height: 260px;
+        margin: 10px 0;
+    }
+
+    #pourquoinous p {
+        padding: 17px;
+    }
+
+    #contact ul {
+        padding: 18px;
+    }
+
+    #contact li {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    body > p {
+        font-size: 17px;
+    }
+}
+
+/* =========================================
+   ACCESSIBILITÉ : MOUVEMENTS RÉDUITS
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
